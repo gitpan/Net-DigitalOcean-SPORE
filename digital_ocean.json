@@ -4,286 +4,367 @@
 	"methods" : {
 
 		"get_droplets" : {
+			"required_params" : [
+				"client_id",
+				"api_key"
+			],
 			"path" : "/droplets",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"new_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"name",
 				"size_id",
 				"image_id",
-				"region_id",
+				"region_id"
 			],
 			"optional_params" : [
 				"ssh_key_ids",
-				"private_networking",
+				"private_networking"
 			],
 			"path" : "/droplets/new",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"get_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"path" : "/droplets/:droplet_id",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"reboot_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"path" : "/droplets/:droplet_id/reboot",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"power_cycle_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"path" : "/droplets/:droplet_id/power_cycle",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"shutdown_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"path" : "/droplets/:droplet_id/shutdown",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"power_off_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"path" : "/droplets/:droplet_id/power_off",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"power_on_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"path" : "/droplets/:droplet_id/power_on",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"password_reset_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"path" : "/droplets/:droplet_id/password_reset",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"resize_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id",
 				"size_id"
 			],
 			"path" : "/droplets/:droplet_id/resize",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"snapshot_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"optional_params" : [
 				"name"
 			],
 			"path" : "/droplets/:droplet_id/snapshot",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"restore_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id",
 				"image_id"
 			],
 			"path" : "/droplets/:droplet_id/restore",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"rebuild_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id",
 				"image_id"
 			],
 			"path" : "/droplets/:droplet_id/rebuild",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"enable_droplet_backups" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"path" : "/droplets/:droplet_id/enable_backups",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"disable_droplet_backups" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
 			],
 			"path" : "/droplets/:droplet_id/disable_backups",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"rename_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id",
 				"name"
 			],
 			"path" : "/droplets/:droplet_id/rename",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"destroy_droplet" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"droplet_id"
+			],
 			"optional_params" : [
 				"scrub_data"
 			],
 			"path" : "/droplets/:droplet_id/destroy",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 
 
 		"get_regions" : {
+			"required_params" : [
+				"client_id",
+				"api_key"
+			],
 			"path" : "/regions",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 
 
 		"get_images" : {
+			"required_params" : [
+				"client_id",
+				"api_key"
+			],
 			"optional_params" : [
 				"filter"
 			],
 			"path" : "/images",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"get_image" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"image_id"
 			],
 			"path" : "/images/:image_id",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"destroy_image" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"image_id"
 			],
 			"path" : "/images/:image_id/destroy",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"transfer_image" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"image_id",
 				"region_id"
 			],
 			"path" : "/images",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 
 
 		"get_ssh_keys" : {
+			"required_params" : [
+				"client_id",
+				"api_key"
+			],
 			"path" : "/ssh_keys",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"new_ssh_key" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"name",
 				"ssh_pub_key"
 			],
 			"path" : "/ssh_keys/new",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"get_ssh_key" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"ssh_key_id"
 			],
 			"path" : "/ssh_keys/:ssh_key_id",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"edit_ssh_key" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"ssh_key_id",
 				"ssh_pub_key"
 			],
 			"path" : "/ssh_keys/:ssh_key_id/edit",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"destroy_ssh_key" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"ssh_key_id"
 			],
 			"path" : "/ssh_keys/:ssh_key_id/destroy",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 
 
 		"get_sizes" : {
+			"required_params" : [
+				"client_id",
+				"api_key"
+			],
 			"path" : "/sizes",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 
 
 		"get_domains" : {
+			"required_params" : [
+				"client_id",
+				"api_key"
+			],
 			"path" : "/domains",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"new_domain" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"name",
 				"ip_address"
 			],
 			"path" : "/domains/new",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"get_domain" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"domain_id"
 			],
 			"path" : "/domains/:domain_id",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"destroy_domain" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"domain_id"
 			],
 			"path" : "/domains/:domain_id/destroy",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"get_domain_records" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"domain_id"
 			],
 			"path" : "/domains/:domain_id/records",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"new_domain_record" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"domain_id",
 				"record_type",
 				"data"
@@ -295,20 +376,24 @@
 				"weight"
 			],
 			"path" : "/domains/:domain_id/records/new",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"get_domain_record" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"domain_id",
 				"record_id"
 			],
 			"path" : "/domains/:domain_id/records/:record_id",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"edit_domain_record" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"domain_id",
 				"record_id",
 				"data"
@@ -320,32 +405,36 @@
 				"weight"
 			],
 			"path" : "/domains/:domain_id/records/:record_id/edit",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 		"destroy_domain_record" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"domain_id",
 				"record_id"
 			],
 			"path" : "/domains/:domain_id/records/:record_id/destroy",
-			"method" : "GET",
+			"method" : "GET"
 		},
 
 
 
 		"get_event" : {
 			"required_params" : [
+				"client_id",
+				"api_key",
 				"event_id"
 			],
 			"path" : "/events/:event_id",
-			"method" : "GET",
-		},
+			"method" : "GET"
+		}
 
 	},
 	"formats" : [
 		"json",
-		"xml",
+		"xml"
 	],
 	"name" : "DigitalOcean",
 	"authority" : "cpan:FFFINKEL",

@@ -3,7 +3,23 @@ Changes from 2012-10-21 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.001 at 2013-10-21 03:16:52 +0000
+version 0.002 at 2013-10-21 04:34:03 +0000
+------------------------------------------
+
+  Change: b14af600e52fba462e763111915fcefe6c80edf3
+  Author: Matt Finkel <finkel.matt@gmail.com>
+  Date : 2013-10-21 04:33:35 +0000
+
+    Add client_id, api_key as base attributes 
+
+  Change: e1e6549309c5a165f8b434fd7e9c588bc6309ebe
+  Author: Matt Finkel <finkel.matt@gmail.com>
+  Date : 2013-10-21 04:17:53 +0000
+
+    Update json with validated json 
+
+------------------------------------------
+version 0.001 at 2013-10-21 03:16:36 +0000
 ------------------------------------------
 
   Change: e9bf5afd92cd701d8cbb78998571a73ff0386ac9

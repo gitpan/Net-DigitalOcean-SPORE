@@ -3,7 +3,7 @@ BEGIN {
   $Net::DigitalOcean::Spore::AUTHORITY = 'cpan:FFFINKEL';
 }
 {
-  $Net::DigitalOcean::Spore::VERSION = '0.001';
+  $Net::DigitalOcean::Spore::VERSION = '0.002';
 }
 
 #ABSTRACT: DigitalOcean SPORE REST Client
@@ -15,6 +15,12 @@ use Dir::Self;
 use Net::HTTP::Spore 0.06;
 
 
+has client_id => qw/ is ro isa Str required 1 /;
+
+
+has api_key => qw/ is ro isa Str required 1 /;
+
+
 has _client => (
 	is      => 'ro',
 	isa     => 'Net::HTTP::Spore',
@@ -23,11 +29,10 @@ has _client => (
 	handles => qr/.*/,
 );
 
-
 sub _build__client {
 	my $self   = shift;
-	my $dir = __DIR__ . '../../../digital_ocean.json';
-	my $client = Net::HTTP::Spore->new_from_spec( $dir );
+	my $path = __DIR__ . '../../../digital_ocean.json';
+	my $client = Net::HTTP::Spore->new_from_spec( $path );
 	$client->enable('Format::JSON');
 	return $client;
 }
@@ -47,7 +52,7 @@ Net::DigitalOcean::Spore - DigitalOcean SPORE REST Client
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 NAME
 
@@ -55,13 +60,17 @@ Net::DigitalOcean::Spore - DigitalOcean SPORE REST Client
 
 =head1 ATTRIBUTES
 
+=head2 client_id
+
+=head2 api_key
+
 =head2 _client
 
 REST client
 
-=head2 _build__client
-
 =head1 SEE ALSO
+
+L<Net::HTTP::Spore>
 
 =head1 AUTHOR
 

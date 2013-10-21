@@ -1,0 +1,49 @@
+package Net::DigitalOcean::Spore;
+
+#ABSTRACT: DigitalOcean SPORE REST Client
+
+use Moose;
+use namespace::autoclean;
+
+use Dir::Self;
+use Net::HTTP::Spore 0.06;
+
+=head1 NAME
+
+Net::DigitalOcean::Spore - DigitalOcean SPORE REST Client
+
+=head1 ATTRIBUTES
+
+=head2 _client
+
+REST client
+
+=cut
+
+has _client => (
+	is      => 'ro',
+	isa     => 'Net::HTTP::Spore',
+	lazy    => 1,
+	builder => '_build__client',
+	handles => qr/.*/,
+);
+
+=head2 _build__client
+
+=cut
+
+sub _build__client {
+	my $self   = shift;
+	my $dir = __DIR__ . '../../../digital_ocean.json';
+	my $client = Net::HTTP::Spore->new_from_spec( $dir );
+	$client->enable('Format::JSON');
+	return $client;
+}
+
+=head1 SEE ALSO
+
+=cut
+
+__PACKAGE__->meta->make_immutable;
+
+1;
